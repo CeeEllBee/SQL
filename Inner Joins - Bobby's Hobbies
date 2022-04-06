@@ -1,0 +1,10 @@
+select persons.name, hobbies.name
+from persons
+inner join hobbies
+on persons.id = hobbies.person_id;
+
+select persons.name, hobbies.name
+from persons
+inner join hobbies
+on persons.id = hobbies.person_id
+where persons.name = "Bobby McBobbyFace";
