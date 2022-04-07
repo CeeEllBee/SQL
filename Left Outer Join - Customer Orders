@@ -1,0 +1,11 @@
+select customers.name, customers.email, orders.item, orders.price
+from customers
+left outer join orders
+on customers.id = orders.customer_id;
+
+select customers.name, customers.email, sum (orders.price) as spent
+from customers
+left outer join orders
+on customers.id = orders.customer_id
+group by customers.name
+order by spent desc;
