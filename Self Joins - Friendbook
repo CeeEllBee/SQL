@@ -1,0 +1,11 @@
+select p.fullname, h.name
+from persons p
+join hobbies h 
+on p.id = h.person_id;
+
+select a.fullname as friend1, b.fullname as friend2
+from friends
+join persons a
+on a.id = friends.person1_id
+join persons b
+on b.id = friends.person2_id;
